@@ -1,6 +1,6 @@
-# Title (replace with your title)
+# Ultimate Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+Welcome to this ultimate REGEX tutorial where we do our best to explain REGEX and how it works.
 
 ## Summary
 
@@ -24,6 +24,17 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
+Anchors have special meaning in regular expressions. They do not match any character. Instead, they match a position before or after characters:
+
+ * ^ – The caret anchor matches the beginning of the text.
+   * Example - /^J/ will match true for any string that begins with "J"
+ * $ – The dollar anchor matches the end of the text.
+   * Example - /t$/ will match true for anty string ending with "t" 
+ * ^$ - In combination, will check if a string fully matches a pattern
+   * Example - /^[a-z0-9-_]{3,16}$/ will match tru for any string that has a lowercase, number, -, _, and it at least 3 -16 characters long. False, on any other character! 
+
+Informational source: [Regular Expression: Anchors](https://www.javascripttutorial.net/regular-expression-anchors)
+
 ### Quantifiers
 
 ### OR Operator
@@ -46,4 +57,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I am an expeienced Quality Analyst and an aspiring Devedloper. As for Regex: It has been a common tool throughout my career. In cases that requirements state a strict format
+on data values. Regex has been a strong tool used to validate data through automation. Although easay to use; it can be difficult to master!
+
+Lucas Zimmerman: [GITHUB](github.com/dolomiteson)	[EMAIL](mailto:zimmerman.lucas@hotmail.com)
