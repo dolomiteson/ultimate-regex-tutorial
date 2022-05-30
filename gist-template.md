@@ -45,7 +45,7 @@ Quantifiers match a number of instances of a character, group, or character clas
   * Example - /\d{2,4}/g will find numbers that have numbers 2-4 digits long.
 * Quantifiers also have shorthands which are beneficial to the developer
   * The + is shorthand for 1 0r more: /\d+/g
-  * The ? is shothand for 0 or 1: /colou?r/ will match both color and colour
+  * The ? is shorthand for 0 or 1: /colou?r/ will match both color and colour
   * The * means 0 or more: /Java\w*/g will match the string Java followed by any word character.
 * Common quantifier examples:
   * Whole Numbers: /^\d+$/
@@ -102,9 +102,54 @@ Informational source: [Regular Expression: Flags](https://javascript.info/regexp
 
 ### Grouping and Capturing
 
+Grouping and Capturing is a way to capture all or portions of a string into an array for use. PLease see the following break-daown:
+
+* Given resource/id or posts/10
+  * For /\w+\/\d+/:
+    * Where \w+ will give us posts
+    * Where \/ will give us /
+    * Where \d+ will give us 10
+    * The return would give us posts/10
+  * For /\w+\/(\d+)/:
+    * Where p-arenthesis around digits+
+    * The return would give us an array of posts/10 and 10
+
+As you can see we can capture the whole pattern as well as portions of the pattern. You can also use multiple parenthesis within the pattern to capture
+as much as a breakdown of a pattern for what use you may need: /(\w+)\/(\d+)/
+
+Informational source: [Regular Expression: Grouping and Capturing](https://www.javascripttutorial.net/javascript-regex/capturing-groups)
+
 ### Bracket Expressions
 
+Bracket expressions, also known as Sets and Ranges. Is a robust way to search for values in a string pattern from a-b. Where a = a starting point and b = the ending point.
+
+* The most common would be:
+  * Numerical - [0-9] will look for a digit 0-9
+  * Lowercase - [a-z] will look for a character a-z
+  * Uppercase - [A-Z] will look for a character A-Z
+*  Other Uses:
+  * /[cbr]ats/g - will return a match where the first character can be c, b, or r; and the following pattern ats.
+  * Exclusion - /[^cbr]ats/g will return any first character other than c, b, r and the folling pattern ats.
+
+Informational source: [Regular Expression: Bracket Expressions](https://www.javascripttutorial.net/regular-expression-sets-and-ranges)
+
 ### Greedy and Lazy Match
+
+The maiin difference between greedy and lazy match is how explicit you want to be in searching your pattern. In comparison to sql:
+It would be the difference of a query using equals vs match. See the following examples:
+
+* Given /".+"/g = Greedy
+  * " starts with "
+  * . matches any character except the newline
+  * + matches the preceding character one or more times
+  * " ends with "
+  * g flag returns all matches
+  * This woulkd be a Greedy match that explicitly looks for that pattern.
+  * Returns '<button type="submit" class="btn">Send</button>': "submit" class="btn"
+* Given /".+?"/g = Lazy
+  * Returns '<button type="submit" class="btn">Send</button>': ["submit", "btn"]
+
+Informational source: [Regular Expression: Greedy and Lazy Match](https://www.javascripttutorial.net/javascript-regex-greedy)
 
 ### Boundaries
 
