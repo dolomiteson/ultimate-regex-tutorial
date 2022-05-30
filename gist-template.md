@@ -36,6 +36,7 @@ Anchors have special meaning in regular expressions. They do not match any chara
 Informational source: [Regular Expression: Anchors](https://www.javascripttutorial.net/regular-expression-anchors)
 
 ### Quantifiers
+
 Quantifiers match a number of instances of a character, group, or character class in a string.
 
 * A number in curly braces {n} is the simplest quantifier.
@@ -55,6 +56,14 @@ Quantifiers match a number of instances of a character, group, or character clas
 Informational source: [Regular Expression: Quantifiers](https://www.javascripttutorial.net/regular-expression-quantifiers)
 
 ### OR Operator
+
+Alternation is the term in regular expression that is actually a simple “OR”.
+
+* In a regular expression it is denoted with a vertical line character |.
+  * Example - /html|php|css|java(script)?/gi will find a match on html or php or css or java or javascript
+* Also, To apply alternation to a chosen part of the pattern, we can enclose it in parentheses:
+  * Example - I love HTML|CSS matches I love HTML or CSS.
+  * Example - I love (HTML|CSS) matches I love HTML or I love CSS.
 
 ### Character Classes
 
