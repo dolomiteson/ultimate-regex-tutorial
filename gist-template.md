@@ -36,6 +36,23 @@ Anchors have special meaning in regular expressions. They do not match any chara
 Informational source: [Regular Expression: Anchors](https://www.javascripttutorial.net/regular-expression-anchors)
 
 ### Quantifiers
+Quantifiers match a number of instances of a character, group, or character class in a string.
+
+* A number in curly braces {n} is the simplest quantifier.
+  * Example - /\d{4}/ matches a four-digit number.
+* You can also use range in quantifiers.
+  * Example - /\d{2,4}/g will find numbers that have numbers 2-4 digits long.
+* Quantifiers also have shorthands which are beneficial to the developer
+  * The + is shorthand for 1 0r more: /\d+/g
+  * The ? is shothand for 0 or 1: /colou?r/ will match both color and colour
+  * The * means 0 or more: /Java\w*/g will match the string Java followed by any word character.
+* Common quantifier examples:
+  * Whole Numbers: /^\d+$/
+  * Decimal Numbers: /^\d*.\d+$/
+  * Both Whole and Decimal Numbers: /^\d*(.\d+)?$/
+  * Neagative, Positive(Whole and Decimal) Numbers: /^-?\d*(.\d+)?$/
+
+Informational source: [Regular Expression: Quantifiers](https://www.javascripttutorial.net/regular-expression-quantifiers)
 
 ### OR Operator
 
