@@ -65,9 +65,40 @@ Alternation is the term in regular expression that is actually a simple “OR”
   * Example - I love HTML|CSS matches I love HTML or CSS.
   * Example - I love (HTML|CSS) matches I love HTML or I love CSS.
 
+Informational source: [Regular Expression: OR Operator](https://javascript.info/regexp-alternation)
+
 ### Character Classes
 
+A character class allows you to match any symbol from a certain character set. A character class is also called a character set.
+
+* Digit Character - \d match a single digit or a character from 0 to 9.
+* White Space - \s match a single whitespace symbol such a space, a tab (\t), a newline (\n).
+* Word Character - \w matches the ASCII character including Latin Alphabets, Digits, and the Underscore
+
+There are also Inverse Classes!
+
+* Not Digit - \D matches any character except a digit e.g., a letter.
+* Not Whitespace - \S matches any character except a whitespace e.g., a letter
+* Not Word Character - \W matches any character except a word character e.g., non-Latin letter or space.
+
+Finally there is the Dot Character. it is a special character class that matches any character except a newline
+
+* Example - /E.6/ will match a pattern of ES6, E16, ... ; But does not match E\n6
+
+Informational source: [Regular Expression: Character Classes](https://www.javascripttutorial.net/javascript-character-classes)
+
 ### Flags
+
+Flags are a robust but easy way to alter your search on a given pattern. There are only six of them.
+
+* i - With this flag the search is case-insensitive
+* g - With this flag the search looks for all matches, without it – only the first match is returned.
+* m - Multiline mode - used for strings with newline, paragraphs, ...
+* s - Enables “dotall” mode, that allows a dot . to match newline character \n
+* u - Enables full Unicode support. The flag enables correct processing of surrogate pairs.
+* y - “Sticky” mode: searching at the exact position in the text
+
+Informational source: [Regular Expression: Flags](https://javascript.info/regexp-introduction#flags)
 
 ### Grouping and Capturing
 
